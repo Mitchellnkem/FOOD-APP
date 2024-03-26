@@ -56,8 +56,17 @@
 	gap: 5px;
 } */
 
-/* .navbar-search-icon{
-	display: flex;
-	align-items: center;
-	gap: 5px;
-} */
+.navbar-search-icon{
+	position: relative;
+	
+}
+
+.navbar-search-icon .dot{
+	position: absolute;
+	min-width: 10px;
+	min-height: 10px;
+	background-color: tomato;
+	border-radius: 59%;
+	top: -8px;
+	right: -8px;
+}

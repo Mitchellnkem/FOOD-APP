@@ -1,6 +1,6 @@
 import "./Navbar.css" 
 // eslint-disable-next-line no-unused-vars
-import { assets } from "../assets/assets"
+import { assets } from "../../assets/assets"
 import { useState } from "react";
 
 const Navbar = () => {
