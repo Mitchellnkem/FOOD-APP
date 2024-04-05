@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-import { createContext, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 import { food_list } from "../assets/assets";
 
 
@@ -27,6 +27,11 @@ const StoreContextProvider = (props) => {
 
 
 
+	useEffect(() => {
+		console.log(cartItems);
+	}, [cartItems]);
+
+
 
 	// eslint-disable-next-line no-unused-vars
 	const contextValue = {
@@ -47,4 +52,4 @@ const StoreContextProvider = (props) => {
 };
 
 
-export default StoreContextProvider
+export default StoreContextProvider 

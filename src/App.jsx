@@ -5,6 +5,7 @@ import {Routes, Route} from "react-router-dom";
 import Cart from './pages/Cart/Cart';
 import PlaceOrder from './pages/PlaceOrder/PlaceOrder';
 import Home from './pages/Home/Home';
+import Footer from './components/Footer/Footer';
 
 
 
@@ -13,6 +14,8 @@ const App = () => {
   
 
   return (
+
+    <>
       <div className="app">
         <Navbar />
 
@@ -23,7 +26,8 @@ const App = () => {
           <Route path="/contact-us" element={<PlaceOrder />} />
         </Routes>
       </div>
-      
+      <Footer />
+    </>  
   );
 };
 

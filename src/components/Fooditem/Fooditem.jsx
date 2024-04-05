@@ -53,4 +53,4 @@ import { StoreContext } from "../../context/StoreContext"
   )
 }
 
-export default Fooditem
+export default Fooditem 
