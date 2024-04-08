@@ -2,6 +2,7 @@ import "./Navbar.css"
 // eslint-disable-next-line no-unused-vars
 import { assets } from "../../assets/assets"
 import { useState } from "react";
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 
@@ -14,33 +15,37 @@ const Navbar = () => {
 
 		<ul className="navbar-menu">
 			
-			<li 
+			<Link 
 			
 			onClick = {() => setMenu("home")} 
 			className={menu === "home" ? "active" : ""}
 			>
 				Home
-			</li>
+			</Link>
 
-			<li 
+			<a 
+			href="#explore-menu" 
 			onClick = {() => setMenu("menu")} 
 			className={menu === "menu" ? "active" : ""}
 			>
 				Menu
-			</li>
+			</a>
 
-			<li 
+			<a 
+			href="#mobile-app"
 			onClick = {() => setMenu("mobile-app")} 
 			className={menu === "mobile-app" ? "active" : ""}
 			>
 				Mobile App
-				</li>
-			<li 
+			</a>
+
+			<a 
+			href="#contact-us"
 			onClick={() => setMenu("contact-us")}
 			className={menu === "contact-us" ? "active" : ""}
 			>
 				Contact Us
-			</li>
+			</a>
 		
 		</ul>
 		<div className="navbar-right">

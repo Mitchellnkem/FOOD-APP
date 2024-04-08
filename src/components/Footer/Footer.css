@@ -53,3 +53,20 @@
 	background-color: tomato;
 	border: none;
 }
+
+
+
+
+/* media queries */
+@media (max-width: 767px){
+	.footer-content{
+		display: flex;
+		flex-direction: column;
+		gap: 35px;
+	}
+
+	.footer-copyright{
+	-webkit-text-emphasis: center;
+	 text-emphasis: content;
+	}
+}
