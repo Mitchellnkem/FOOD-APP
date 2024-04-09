@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import "./Navbar.css" 
 // eslint-disable-next-line no-unused-vars
 import { assets } from "../../assets/assets"
 import { useState } from "react";
 import { Link } from 'react-router-dom';
 
-const Navbar = () => {
+const Navbar = ({ setShowLogin }) => {
 
 	// eslint-disable-next-line no-unused-vars
 	const [menu,setMenu] = useState("home")
@@ -32,7 +33,7 @@ const Navbar = () => {
 			</a>
 
 			<a 
-			href="#mobile-app"
+			href="#app-download"
 			onClick = {() => setMenu("mobile-app")} 
 			className={menu === "mobile-app" ? "active" : ""}
 			>
@@ -40,7 +41,7 @@ const Navbar = () => {
 			</a>
 
 			<a 
-			href="#contact-us"
+			href="#footer"
 			onClick={() => setMenu("contact-us")}
 			className={menu === "contact-us" ? "active" : ""}
 			>
@@ -54,7 +55,7 @@ const Navbar = () => {
 				<img src={assets.basket_icon} alt="" />
 				<div className="dot"></div>
 			</div>
-			<button>Sign In</button>
+			<button onClick={() => setShowLogin(true)}>Sign In</button>
 		</div>
 	</div>
   );
