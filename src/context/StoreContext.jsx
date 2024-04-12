@@ -32,6 +32,18 @@ const StoreContextProvider = (props) => {
 	}, [cartItems]);
 
 
+	// eslint-disable-next-line no-unused-vars
+	const getTotalCartAmount = () => {
+		let total = 0
+		for (const item in cartItems) {
+			if (cartItems[item] > 0) {
+				let itemInfo = food_list.find((product) => product._id === item)
+				total += cartItems[item] * itemInfo[0].price
+			}
+		}
+		return total
+	}
+
 
 	// eslint-disable-next-line no-unused-vars
 	const contextValue = {
@@ -40,6 +52,7 @@ const StoreContextProvider = (props) => {
 		setCartItems,
 		addToCart,
 		removeFromCart,
+		getTotalCartAmount
 	};
 
 
