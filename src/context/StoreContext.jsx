@@ -34,14 +34,16 @@ const StoreContextProvider = (props) => {
 
 	// eslint-disable-next-line no-unused-vars
 	const getTotalCartAmount = () => {
-		let total = 0
+		let totalAmount = 0
 		for (const item in cartItems) {
 			if (cartItems[item] > 0) {
 				let itemInfo = food_list.find((product) => product._id === item)
-				total += cartItems[item] * itemInfo[0].price
+				// eslint-disable-next-line no-unused-vars
+				totalAmount += cartItems[item] * itemInfo.price
 			}
 		}
-		return total
+		// eslint-disable-next-line no-undef
+		return totalAmount;
 	}
 
 
